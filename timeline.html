@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Timeline</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<style>
+		* {
+			box-sizing: border-box;/*Changes box-sizing style*/
+		}
+
+		.mainheading {
+			text-align: center;/*Aligns text center*/
+			color: white;/*Changes text color to white*/
+			margin-top: 20px;/*Changes margin-top to 20px*/
+		}
+
+		.timeline {
+			position: relative;/*Changes position to relative*/
+			max-width: 1200px;/*Changes maximum width to -1200px*/
+			margin: 0 auto;/*Automatically calcualtes the margin*/
+		}
+
+		.timeline::after {
+			content: '';
+			position: absolute;/*Changes position to absolute*/
+			width: 6px;/*Changes width to 6px*/
+			background-color: white;/*Changes background color to white*/
+			top: 0;/*Changes top to 0*/
+			bottom: 0;/*Changes bottom to 0*/
+			left: 50%;/*Changes left to 50%*/
+			margin-left: -3px;/*Changes margin left to -3px*/
+		}
+
+		.container {
+			padding: 10px 40px;/*Changes padding to 10px and 40px*/
+			position: relative;/*Changes position to relative*/
+			background-color: inherit;/*Changes background color to inherit*/
+			width: 50%;/*Changes width to 50%*/
+		}
+
+		.container::after {
+			content: '';
+			position: absolute;/*Changes position to absolute*/
+			width: 25px;/*Changes width to 25px*/
+			height: 25px;/*Changes height to 25px*/
+			right: -17px;/*Changes right to -17px*/
+			background-color: #e2eeff;/*Changes background color to greyish white*/
+			border: 4px solid #004aad;/*Changes border to 4px solid and dark blue*/
+			top: 15px;/*Changes top to 15px*/
+			border-radius: 50%;/*Changes border radius by 50%*/
+			z-index: 1;/*Makes element on top layer*/
+			cursor: pointer;/*Changes cursor to pointer*/
+		}
+
+		.left {
+			left: 0;/*Changes left to 0px*/
+		}
+
+		.right {
+			left: 50%;/*Changes right to 50%*/
+		}
+
+		.left::before {
+			content: " ";
+			height: 0;/*Changes height to 0*/
+			position: absolute;/*Changes position to absolute*/
+			top: 22px;/*Changes top to 22px*/
+			width: 0;/*Changes width to 0*/
+			z-index: 1;/*Makes element on top layer*/
+			right: 30px;/*Changes right to 30px*/
+			border: medium solid white;/*Changes border to medium solid and white*/
+			border-width: 10px 0 10px 10px;/*Changes border width*/
+			border-color: transparent transparent transparent #004aad;/*Changes border color*/
+		}
+
+		.right::before {
+			content: " ";
+			height: 0;/*Changes height to 0*/
+			position: absolute;/*Changes position to absolute*/
+			top: 22px;/*Changes top to 22px*/
+			width: 0;/*Changes width to 0*/
+			z-index: 1;/*Makes element on top layer*/
+			left: 30px;/*Changes left to 30px*/
+			border: medium solid white;/*Changes border to medium solid and white*/
+			border-width: 10px 10px 10px 0;/*Changes border width*/
+			border-color: transparent #004aad transparent transparent;/*Changes border color*/
+		}
+
+		.right::after {
+			left: -16px;/*Changes left to -16px*/
+			right: auto;/*Changes right to auto*/
+		}
+
+		.content {
+			padding: 10px 10px;/*Changes padding to 10px*/
+			background-color: #002f6f;/*Changes background color to dark blue*/
+			position: relative;/*Changes position to relative*/
+			border-radius: 6px;/*Changes border radius by 6px*/
+			border: 5px solid #004aad;/*Changes border to 5px solid and blue*/
+			color: white;/*Changes color to white*/
+			z-index: 5;/*Makes element on layer 5*/
+		}
+
+		.hover-image {
+			display: none;/*Changes display to none*/
+			position: absolute;/*Changes position to absolute*/
+			top: 10px;/*Changes top to 10px*/
+			width: 220px;/*Changes width to 220px*/
+			border-radius: 6px;
+			border: 5px solid #004aad;/*Changes border to 5px solid and blue*/
+			background-color: #002f6f;/*Changes background color to dark blue*/
+			color: white;/*Changes color to white*/
+			padding: 5px;/*Changes padding to 5px*/
+			z-index: 20;/*Makes element on layer 20*/
+			opacity: 0;/*Makes element invisible*/
+		}
+
+		.left .hover-image {
+			right: -240px;/*Changes right to -240px*/
+		}
+
+		.right .hover-image {
+			left: -240px;/*Changes left to -240px*/
+		}
+
+		@keyframes fadeInSimple {
+			from {
+				opacity: 0;/*Makes element invisible*/
+			}
+			to {
+				opacity: 1;/*Makes element visible*/
+			}
+		}
+
+		.container:hover .hover-image {
+			display: block;/*Changes display to block*/
+			animation: fadeInSimple 0.5s ease forwards;/*Specifies animation*/
+			opacity: 1;/*Makes element visible*/
+		}
+
+		@media screen and (max-width: 600px) {
+			.timeline::after {
+				left: 31px;/*Changes left to 31px*/
+			}
+
+			.container {
+				width: 100%;/*Changes width to 100%*/
+				padding-left: 70px;/*Changes padding left to 70px*/
+				padding-right: 25px;/*Changes padding right to 25px*/
+			}
+
+			.container::before {
+				left: 60px;/*Changes left to 60px*/
+				border: medium solid white;/*Changes border to medium solid and white*/
+				border-width: 10px 10px 10px 0;/*Changes border width to 10px*/
+				border-color: transparent white transparent transparent;/*Changes border color to white*/
+			}
+
+			.left::after,
+			.right::after {
+				left: 15px;/*Changes left to 15px*/
+				right: auto;/*Changes right to auto*/
+			}
+
+			.right {
+				left: 0%;/*Changes left to 0%*/
+			}
+
+			.hover-image {
+				position: relative;/*Changes position to relative*/
+				display: block;/*Changes display to block*/
+				width: 90%;/*Changes width to 90%*/
+				margin-top: 10px;/*Changes margin top to 10px*/
+				left: 0 !important;/*Changes left to 0*/
+				right: 0 !important;/*Changes right to 0*/
+				box-shadow: none;/*Changes boxshadow to none*/
+				border: 3px solid #004aad;/*Changes border to 3px solid and blue*/
+				opacity: 1 !important;/*Changes opacity to 1*/
+				animation: none !important;/*Changes animation to none*/
+			}
+		}
+	</style>
+</head>
+<body>
+	<body>
+
+	<!-- Site header and navigation -->
+	<header>
+		<a href="timeline.html" class="title">Valentino's Website</a>
+		<nav class="navbar">
+			<!-- Navigation links to major pages -->
+			<a href="index.html" class="button">Home</a>
+			<a href="timeline.html" class="button">Timeline</a>
+			<a href="blog.html" class="button">Blog</a>
+			<a href="contact.html" class="button">Contact</a>
+		</nav>
+	</header>
+
+	<!-- Main page content -->
+	<main>
+		<h1 class="mainheading"><i>Timeline</i></h1>
+
+		<!-- Timeline section with milestones -->
+		<section class="timeline">
+			
+			<!-- Each "container" represents a timeline event -->
+
+			<!-- 2031 Milestone -->
+			<article class="container left">
+				<div class="content">
+					<h2>2031</h2>
+					<ul>
+						<li>Promoted to Blue Teamer at TD Bank.</li>
+						<li>Achieved my GIAC or Global Information Assurance Certification.</li>
+					</ul>
+				</div>
+				<img src="Images/Screenshot 2025-06-10 133142.png" alt="Blue Teamer Promotion Logo" class="hover-image" height="200px" />
+			</article>
+
+			<!-- 2030 Milestone -->
+			<article class="container right">
+				<div class="content">
+					<h2>2030</h2>
+					<ul>
+						<li>Started working full time at TD Bank.</li>
+						<li>Got my CISSP or Certified Information Systems Security Professional</li>
+					</ul>
+				</div>
+				<img src="Images/Screenshot 2025-06-10 133412.png" alt="Person helping other person working on a computer" class="hover-image" height="200px" />
+			</article>
+
+			<!-- 2028 Milestone -->
+			<article class="container left">
+				<div class="content">
+					<h2>2028</h2>
+					<ul>
+						<li>Graduated from PTEC and PTC.</li>
+						<li>Got an internship at TD Bank as a desktop support analyst.</li>
+						<li>Got my advanced drone license.</li>
+					</ul>
+				</div>
+				<img src="Images/Screenshot 2025-06-10 133629.png" alt="TD Bank Logo" class="hover-image" height="200px"/>
+			</article>
+
+			<!-- 2024 Milestone -->
+			<article class="container right">
+				<div class="content">
+					<h2>2024</h2>
+					<ul>
+						<li>Got my first job at Code Ninjas.</li>
+						<li>Created my first video game.</li>
+						<li>Got my basic drone license.</li>
+					</ul>
+				</div>
+				<img src="Images/Screenshot 2025-06-10 133645.png" alt="Code Ninjas Logo" class="hover-image" height="200px"/>
+			</article>
+
+		</section>
+	</main>
+
+	<!-- Footer with links to all pages -->
+	<footer>
+		<p>&copy; Valentino's Website 2035</p>
+		<a href="index.html" class="footerlink" style="margin-left: 65%;"> Home | </a>
+		<a href="timeline.html" class="footerlink"> Timeline | </a>
+		<a href="blog.html" class="footerlink"> Blog | </a>
+		<a href="contact.html" class="footerlink"> Contact</a>
+	</footer>
+
+</body>
+</html>

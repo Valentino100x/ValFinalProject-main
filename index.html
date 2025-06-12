@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Set character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* Your existing CSS unchanged */
+        main{
+            display: grid; /*Allows for the use of grid*/
+            grid-template: 100% / 25% 50% 25%;/*Sets the grid template and rows*/
+            height: 600px;/*Sets height of grid to 600px*/
+        }
+        #part1{
+            grid-column: 1 / 2;/*Takes up columns 1 to 2*/
+            grid-row: 1 / 2;/*Takes up rows 1 to 2*/
+            align-self: center;/*Aligns self to the center*/
+        }
+        #part2{
+            grid-column: 2 / 3;/*Takes up columns 2 to 3*/
+            grid-row: 1 / 2;/*Takes up rows 1 to 2*/
+            text-align: center;/*Aligns text to center*/
+            font-style: italic;/*Italicizes text*/
+        }
+        #part3{
+            grid-column: 3 / 4;/*Takes up columns 3 to 4*/
+            grid-row: 1 / 2;/*Takes up rows 1 to 2*/
+            align-self: center;/*Aligns self to the center*/
+        }
+        #contactbutton{
+            display: flex;/*Allows for the use of flex*/
+            justify-content: center;/*Horizontally centers content*/
+            text-decoration: none;/*Removes underline*/
+            background-color: #004aad;/*Blue background*/
+            border: 6px solid #002f6f;/*Dark blue border*/
+            padding: 15px;/*Padding inside button*/
+            border-radius: 10px;/*Rounded corners*/
+            margin-top: 40px;/*Top margin*/
+            width: 25%;/*Width of button*/
+            margin: auto;/*Centers horizontally*/
+            transition: 0.3s;/*Smooth transition*/
+            transform: scale(1.2);/*Slightly bigger*/
+        }
+        #contactbutton a{
+            text-decoration: none;/*No underline for link*/
+            color: white; /* Add white text for better visibility */
+            font-weight: bold;
+        }
+        #contactbutton:hover{
+            background-color: #004095;/*Darker blue on hover*/
+            border: 6px solid #00275d;/*Darker border on hover*/
+            transform: scale(1.3);/*Slightly bigger on hover*/
+        }
+        #image1, #image2 {
+            width: 250px;/*Width for both images*/
+            height: 480px;/*Height for both images*/
+            background-color: #004aad;/*Blue background*/
+            border: 6px solid #002f6f;/*Dark blue border*/
+            border-radius: 10px;/*Rounded corners*/
+            filter: grayscale(0.5);/*Grayscale filter*/
+            transition: 0.3s;/*Smooth transition*/
+        }
+        #image1:hover,
+        #image2:hover {
+            filter: grayscale(0);/*Remove grayscale on hover*/
+        }
+        .imagediv{
+            justify-self: center;/*Center horizontally*/
+            align-self: center;/*Center vertically*/
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Site title -->
+        <h1><a href="index.html" class="title">Valentino's Website</a></h1> <!--Makes a link that refreshes the page-->
+
+        <!-- Navigation bar -->
+        <nav class="navbar">
+            <a href="index.html" class="button">Home</a><!--Button to HOME-->
+            <a href="timeline.html" class="button">Timeline</a><!--Button to TIMELINE-->
+            <a href="blog.html" class="button">Blog</a><!--Button to BLOG-->
+            <a href="contact.html" class="button">Contact</a><!--Button to CONTACT-->
+        </nav>
+    </header>
+
+    <main>
+        <section id="part1" aria-label="Left Image Section"> <!-- Left section of the page -->
+            <figure class="imagediv"><!--Container for image1-->
+                <img src="Images/Untitled (250 x 400 px) (250 x 480 px) (250 x 480 px).png" id="image1" alt="Older photo of Valentino Simeonidis"><!--Img of older me-->
+            </figure>
+        </section>
+
+        <section id="part2" aria-label="Main Welcome and About Section"> <!-- Middle section of the page -->
+            <h2 style="margin-top: 80px;">Welcome To My Website!</h2>
+            <p><em>This website is used for many purposes including, random things I come across, a brief history of myself, and it is a place to easily contact me. If you have any comments or suggestions contact me.</em></p>
+            <h3 style="text-decoration: underline;">About Valentino</h3>
+            <p style="margin-bottom: 50px;">I am Valentino Simeonidis and I currently am a Blue Teamer at TD Bank where I have been working for the last 7 years. I enjoy gaming, dancing, coding, and creating YouTube videos. If you would like to contact me about a freelance job or just want to discuss one of my videos you can contact me using the button below.</p>
+            <div id="contactbutton">
+                <a href="contact.html" role="button">Contact Me!</a><!--Button that sends user to contact page-->
+            </div>
+        </section>
+
+        <section id="part3" aria-label="Right Image Section"><!-- Right section of the page -->
+            <figure class="imagediv"><!--Container for image2-->
+                <img src="Images/Untitled (250 x 400 px) (250 x 480 px) (250 x 480 px) (1).png" id="image2" alt="Photo of Valentino Simeonidis in a suit"><!--Img of me in a suit-->
+            </figure>
+        </section>
+    </main>
+
+    <footer style="width:auto;">
+        <p>&copy; Valentino's Website 2035</p>
+            <a href="index.html" class="footerlink" style="margin-left: 65%;"> Home | </a><!--Link to HOME-->
+            <a href="timeline.html" class="footerlink"> Timeline | </a><!--Link to TIMELINE-->
+            <a href="blog.html" class="footerlink"> Blog | </a><!--Link to BLOG-->
+            <a href="contact.html" class="footerlink"> Contact</a><!--Link to CONTACT-->
+    </footer>
+</body>
+</html>

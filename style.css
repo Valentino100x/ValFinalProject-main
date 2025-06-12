@@ -1,0 +1,89 @@
+html {
+    font-size: 16px; /* Base font size */
+}
+
+* {
+    letter-spacing: 0.2px;/* Space between letters */
+    line-height: 25px;/* Line height spacing */
+    word-spacing: 0.2px;/* Space between words */
+    color: white;/* Text color */
+}
+
+body {
+    margin: 0;/* Remove default margin */
+    padding: 0;/* Remove default padding */
+    background-color: #001c43;/* Page background color */
+    font-family: Helvetica, sans-serif;/* Font family */
+    color: white;
+}
+
+.title {
+    display: flex;/* Flex container */
+    font-size: 2.5rem;/* Title font size (40px) */
+    text-align: center;/* Center align text */
+    color: white;
+    text-decoration: none;/* Remove underline */
+    font-weight: bolder;/* Bold text */
+    justify-content: center;/* Center items horizontally */
+    transition: 0.3s;/* Smooth transition effect */
+    padding: 5px;/* Inner spacing */
+    margin-top: 20px;/* Top spacing */
+    margin-bottom: 20px;/* Bottom spacing */
+}
+
+.title:hover {
+    color: rgb(232, 232, 232);/* Hover text color */
+}
+
+.navbar {
+    display: flex;
+    background-color: #004aad;/* Navbar background color */
+    border-top: 6px solid #002f6f;/* Top border */
+    border-bottom: 6px solid #002f6f;/* Bottom border */
+    padding: 15px;/* Inner spacing */
+    justify-content: center;
+}
+
+.button {
+    background-color: #002f6f;/* Button background color */
+    color: white;
+    text-decoration: none;
+    padding: 10px;/* Button padding */
+    padding-left: 30px;/* Left padding */
+    padding-right: 30px;/* Right padding */
+    border-radius: 10px;/* Rounded corners */
+    transition: 0.3s;
+    margin-right: 30px;/* Right spacing */
+    margin-left: 30px;/* Left spacing */
+}
+
+.button:hover {
+    background-color: #003e8e;/* Hover background color */
+}
+
+footer {
+    background-color: #004aad;
+    border-top: 6px solid #002f6f;
+    padding: 10px;
+    display: flex;
+    font-size: 1.25rem;/* Footer font size (20px) */
+    align-items: center;/* Center items vertically */
+    color: white;
+    width: 100%;/* Full width */
+}
+
+.footerlink {
+    color: white;
+    transition: 0.3s ease;/* Smooth hover transition */
+    text-decoration: none;
+}
+
+.footerlink:hover {
+    color: #e2eeff;
+    text-decoration: underline;/* Underline on hover */
+}
+
+.mainheading {
+    text-align: center;
+    font-size: 2.1875rem;/* Heading font size (35px) */
+}

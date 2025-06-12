@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Set character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Make responsive -->
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+        /* Apply box-sizing to all elements */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style for main heading */
+        h1.mainheading {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        /* Style for description paragraph */
+        p.description {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            text-align: center;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        /* Style for contact form container */
+        form.contact-form {
+            max-width: 1000px;
+            margin: 0 auto 60px;
+            background-color: #004aad;
+            padding: 30px;
+            border-radius: 10px;
+            border: 10px solid #002f6f;
+        }
+
+        /* Label styling */
+        form.contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        /* Input and textarea base styling */
+        form.contact-form input,
+        form.contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: none;
+            font-size: 1rem;
+            color: #000;
+        }
+
+        /* Focus effect for inputs and textarea */
+        form.contact-form input:focus,
+        form.contact-form textarea:focus {
+            border: 2px solid #004aad;
+            background-color: white;
+            color: #001c43;
+        }
+
+        /* Allow textarea to resize vertically */
+        form.contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Style for submit button */
+        form.contact-form button {
+            background-color: #00337f;
+            color: white;
+            font-weight: bold;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: 0.3s ease;
+            width: 100%;
+        }
+
+        /* Hover effect for button */
+        form.contact-form button:hover {
+            background-color: #003e8f;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header with site title and navigation bar -->
+    <header>
+        <a href="blog.html" class="title">Valentino's Website</a>
+        <nav class="navbar">
+            <a href="index.html" class="button">Home</a>
+            <a href="timeline.html" class="button">Timeline</a>
+            <a href="blog.html" class="button">Blog</a>
+            <a href="contact.html" class="button">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Page heading -->
+        <h1 class="mainheading"><i>Contact Me</i></h1>
+
+        <!-- Contact email and intro text -->
+        <section>
+            <h3 style="text-align: center;">
+                My email is: ValentinoSimeonidis100x@gmail.com
+            </h3>
+            <p class="description">
+                Have questions or just want to say hi? Fill out the form below with your contact details and message, and I’ll get back to you as soon as possible!
+            </p>
+        </section>
+
+        <!-- Contact form section -->
+        <section>
+            <form class="contact-form" action="#" method="GET">
+                <!-- Email input -->
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="JoeSwanson@gmail.com" required />
+
+                <!-- First name input -->
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Your first name" required />
+
+                <!-- Last name input -->
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Your last name" required />
+
+                <!-- Message input -->
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." style="font-family: Helvetica, sans-serif;" required></textarea>
+
+                <!-- Submit button -->
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer with links -->
+    <footer>
+        <p>&copy; Valentino's Website 2035</p>
+            <a href="index.html" class="footerlink"  style="margin-left: 65%;"> Home | </a>
+            <a href="timeline.html" class="footerlink"> Timeline | </a>
+            <a href="blog.html" class="footerlink"> Blog | </a>
+            <a href="contact.html" class="footerlink"> Contact</a>
+    </footer>
+
+</body>
+</html>

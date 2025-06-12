@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .bloggroup{
+            background-color: #004aad;/*Changes background color to blue*/
+            border: 8px solid #002f6f;/*Changes border to 8px solid and dark blue*/
+            border-radius: 15px;/*Changes border radius to 15px*/
+            text-align: center;/*Aligns text to center*/
+            width: 30%;/*Changes width to 30%*/
+            height: 250px;/*Changes height to 250px*/
+            display: inline-block;/*Changes display to inline block*/
+        }
+        #bloggroup1{
+            display: flex;/*Changes display to flex*/
+            justify-content: space-evenly;/*Horizontally spaces content evenly*/
+        }
+        #bloggroup2{
+            margin-top: 20px;/*Changes margin top to 20px*/
+            display: flex;/*Changes display to flex*/
+            justify-content: space-evenly;/*Horizontally spaces content evenly*/
+        }
+        #bloggroup3{
+            margin-top: 20px;/*Changes margin top to 20px*/
+            display: flex;/*Changes display to flex*/
+            justify-content: space-evenly;/*Horizontally spaces content evenly*/
+        }
+        #seemorebutton{
+            text-align: center;/*Aligns text to center*/
+            background-color: #001c43;/*Changes background color to dark blue*/
+            width: 100%;/*Changes width to 100%*/
+            height: 575px;/*Changes height to 575px*/
+            z-index: 1;/*Makes element on top layer*/
+            position: absolute;/*Changes position absolute*/
+            top: 67%;/*Changes top to 67%*/
+            text-decoration: none;/*Changes text decoration to none*/
+            transition: 0.3s ease;;/*Sets the transition to 0.3 seconds*/
+        }
+        #seemorebutton:hover{
+            cursor: pointer;/*Changes cursor to pointer*/
+        }
+    </style>
+</head>
+<body>
+    <!-- Site header and navigation -->
+    <header>
+        <div>
+            <a href="blog.html" class="title">Valentino's Website</a>
+            <nav class="navbar" aria-label="Primary Navigation">
+                <a href="index.html" class="button">Home</a>
+                <a href="timeline.html" class="button">Timeline</a>
+                <a href="blog.html" class="button">Blog</a>
+                <a href="contact.html" class="button">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <h1 class="mainheading"><i>Blog</i></h1>
+
+        <!-- First blog posts group -->
+        <section id="bloggroup1" aria-label="First group of blog posts">
+            <article class="bloggroup">
+                <h2 style="margin-bottom:0px;"><u>Another Cool Game I Found</u></h2>
+                <h3 style="margin:0px;">Date: May 19th, 2034</h3>
+                <p>On March 19 of this year, I found a really interesting game on roblox called airship assault. It may not get frequent updates but it has a lot of amazing content and I already have 90 hours in it. The game is a first and third person shooter about two airship/blimps fighting eachother until one sinks or a draw occurs. If you are like shooting games you can find it <a href="https://www.roblox.com/games/8840562096/Airship-Assault" style="font-weight: bold;" target="_blank" rel="noopener noreferrer">here</a>.</p>
+            </article>
+            <article class="bloggroup">
+                <h2 style="margin-bottom:0px;"><u>New Youtube Video</u></h2>
+                <h3 style="margin:0px;">Date: March 2nd, 2034</h3>
+                <p>I just posted a new Youtube video on March 1 of this year, this video is a response video to my short where I would walk 30 studs for every view on the video. One thing led to another and now I have to walk 80 thousand studs. If this video might interest you the link available <a href="https://www.youtube.com/watch?v=97fRFmiRmWk" style="font-weight: bold;" target="_blank" rel="noopener noreferrer">here</a>. Please subscribe and recommend the content to others if you enjoy it.</p>
+            </article>
+            <article class="bloggroup">
+                <h2 style="margin-bottom:0px;"><u>Job Posting At TD Bank</u></h2>
+                <h3 style="margin:0px;">Date: January 26th, 2034</h3>
+                <p>As of January 26 of this year, there is a new Blue Teamer job posting at TD Bank Canada. They are looking for someone with at least 3 years of experience in the field and someone who is willing to work overtime. If this job may interest you make sure to contact me through the contact page or directly through my email, ValentinoSimeonidis100x@gmail.com.</p>
+            </article>
+        </section>
+
+        <!-- See more button -->
+        <h3 id="seemorebutton" onclick="seemore()" role="button" tabindex="0" aria-label="See more blog posts">See More</h3>
+        <script>
+            // Hides the "See More" button on click
+            function seemore() {
+                document.getElementById("seemorebutton").style.cssText='opacity: 0; z-index: -1;';
+            }
+        </script>
+
+        <!-- Second blog posts group -->
+        <section id="bloggroup2" aria-label="Second group of blog posts">
+            <article class="bloggroup">
+                <h2 style="margin-bottom:0px;"><u>New Youtube Short</u></h2>
+                <h3 style="margin:0px;">Date: January 8th, 2034</h3>
+                <p>I just posted a new Youtube video on January 8 of this year, in this short I wanted to test how many views I could get so I said I would walk 30 studs for every view on the video. Lets see if this challenge will take less than a day to complete. If this video might interest you the link available <a href="https://www.youtube.com/shorts/Qhl1yKYqy38" style="font-weight: bold;" target="_blank" rel="noopener noreferrer">here</a>. Please subscribe and recommend the content to others if you enjoy it.</p>
+            </article>
+            <article class="bloggroup">
+                <h2 style="margin-bottom:0px;"><u>Cool Game I Found</u></h2>
+                <h3 style="margin:0px;">Date: December 30th, 2033</h3>
+                <p>On December 30th of this year, I found a really interesting game on roblox called Block Tales. It may not get frequent updates but it has a lot of amazing content. The game is a turnbased RPG with 4 chapters. The game is based around the classic Roblox style with enemies and items from that era.  If you like RPGs you can find it <a href="https://www.roblox.com/games/16483433878/Block-Tales-DEMO-4" style="font-weight: bold;" target="_blank" rel="noopener noreferrer">here</a>.</p>
+            </article>
+            <article class="bloggroup">
+                <h2 style="margin-bottom:0px;"><u>Scary Story</u></h2>
+                <h3 style="margin:0px;">Date: December 6th, 2033</h3>
+                <p>On December 6th of this year, I heard a thump coming from my window. I could see a shadow of what looked like an arm behind the curtains. At first I was too scared too check what it was but I needed to overcome my fears. I walked to the curtains and I pulled them up. There was no one there, it was merely a tree branch banging on the window.</p>
+            </article>
+        </section>
+
+        <!-- Third blog posts group -->
+        <section id="bloggroup3" aria-label="Third group of blog posts">
+            <article class="bloggroup">
+                <h2 style="margin-bottom:0px;"><u>New Youtube Short</u></h2>
+                <h3 style="margin:0px;">Date: December 2nd, 2033</h3>
+                <p>I just posted a new Youtube short on December 2 of this year, this short is about the Roblox bacon. The short talks about how the Roblox bacon has a 3.08 meter vertical which would allow him to easily dunk on Lebron James. If this video might interest you the link available <a href="https://www.youtube.com/shorts/mKPFY3RHXhQ" style="font-weight: bold;" target="_blank" rel="noopener noreferrer">here</a>. Please subscribe and recommend the content to others if you enjoy it.</p>
+            </article>
+            <article class="bloggroup">
+                <h2 style="margin-bottom:0px;"><u>New Youtube Video</u></h2>
+                <h3 style="margin:0px;">Date: November 21st, 2033</h3>
+                <p>I just posted a new Youtube video on November 21 of this year, this video is a tutorial. The tutorial is an in depth explanation and analysis on how to obtain the "Find My Pages" badge in untitled tag game. If this video might interest you the link available <a href="https://www.youtube.com/watch?v=UpNS4K1nzL4&list=PLcy3c_ZccEE9P9qozTzGimQsDgdHf4PbY" style="font-weight: bold;" target="_blank" rel="noopener noreferrer">here</a>. Please subscribe and recommend the content to others if you enjoy it.</p>
+            </article>
+            <article class="bloggroup">
+                <h2 style="margin-bottom:0px;"><u>Cool Game I found</u></h2>
+                <h3 style="margin:0px;">Date: November 16th, 2033</h3>
+                <p>On December 30th of this year, I found a really interesting game on roblox called Untitled Tag Game. It gets a lot of impactful updates weekly. The game is just a bunch of people playing tag with different gamemode. The game is based around the popular childhood game tag.  If you are like tag you can find it <a href="https://www.roblox.com/games/16483433878/Block-Tales-DEMO-4" style="font-weight: bold;" target="_blank" rel="noopener noreferrer">here</a>.</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="width:auto; margin-top: 20px;">
+        <p>&copy; Valentino's Website 2035</p>
+        <a href="index.html" class="footerlink" style="margin-left: 65%;"> Home | </a>
+        <a href="timeline.html" class="footerlink"> Timeline | </a>
+        <a href="blog.html" class="footerlink"> Blog | </a>
+        <a href="contact.html" class="footerlink"> Contact</a>
+    </footer>
+</body>
+</html>
